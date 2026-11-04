@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>In Loving Memory — 1st Lt. Tyler James Feehan</title>
+<meta name="description" content="Honoring the life and service of 1st Lt. Tyler James Feehan (posthumously Captain), U.S. Army — killed in action in Jordan, July 18, 2026. Support the ROTC scholarship in his name.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0b1d33;
+    --navy-2:#12294a;
+    --steel:#1e3a5f;
+    --gold:#c9a227;
+    --gold-soft:#e2c766;
+    --cream:#f7f4ec;
+    --paper:#ffffff;
+    --ink:#1a222c;
+    --muted:#5b6470;
+    --line:rgba(201,162,39,.35);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.65;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.serif{font-family:'Cormorant Garamond',Georgia,serif}
+  a{color:inherit}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 24px}
+
+  /* ribbon */
+  .ribbon{background:var(--navy);color:var(--gold-soft);text-align:center;font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;padding:10px 16px;font-weight:600}
+
+  /* hero */
+  .hero{position:relative;background:linear-gradient(180deg,rgba(11,29,51,.86),rgba(11,29,51,.94)),radial-gradient(circle at 50% -10%,rgba(201,162,39,.22),transparent 55%),var(--navy);color:#fff;text-align:center;padding:72px 24px 88px;overflow:hidden}
+  .hero:before{content:"";position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,transparent,transparent 38px,rgba(255,255,255,.02) 39px);pointer-events:none}
+  .portrait{width:220px;height:220px;margin:0 auto 26px;border-radius:50%;border:3px solid var(--gold);box-shadow:0 0 0 8px rgba(201,162,39,.12),0 20px 50px rgba(0,0,0,.45);background:linear-gradient(160deg,var(--steel),var(--navy-2));display:flex;align-items:center;justify-content:center;color:var(--gold-soft);font-size:2.4rem;font-weight:600;overflow:hidden;position:relative}
+  .portrait img{width:100%;height:100%;object-fit:cover;object-position:center top}
+  .rank{color:var(--gold-soft);letter-spacing:.32em;text-transform:uppercase;font-size:.82rem;font-weight:600;margin-bottom:12px}
+  .hero h1{font-size:clamp(2.6rem,6vw,4.4rem);font-weight:600;line-height:1.05;letter-spacing:.5px}
+  .callsign{font-family:'Cormorant Garamond',serif;font-style:italic;color:rgba(255,255,255,.7);font-size:1.35rem;margin-top:6px}
+  .dates{margin-top:14px;font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--gold-soft);font-weight:500}
+  .dates .star{margin:0 12px;color:var(--gold);opacity:.85}
+  .hero-quote{max-width:680px;margin:26px auto 0;font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-style:italic;color:rgba(255,255,255,.85)}
+  .hero-cta{display:inline-flex;align-items:center;gap:10px;margin-top:32px;background:linear-gradient(135deg,var(--gold),var(--gold-soft));color:var(--navy);font-weight:700;font-size:1rem;padding:15px 34px;border-radius:50px;text-decoration:none;box-shadow:0 14px 34px rgba(201,162,39,.35);transition:transform .18s ease,box-shadow .18s ease}
+  .hero-cta:hover{transform:translateY(-3px);box-shadow:0 20px 44px rgba(201,162,39,.5)}
+
+  section{padding:72px 0}
+  .eyebrow{text-align:center;color:var(--gold);letter-spacing:.3em;text-transform:uppercase;font-size:.74rem;font-weight:700;margin-bottom:10px}
+  .section-title{text-align:center;font-size:clamp(2rem,4vw,2.8rem);color:var(--navy);font-weight:600;margin-bottom:8px}
+  .divider{width:64px;height:2px;background:var(--gold);margin:18px auto 40px;position:relative}
+  .divider:before,.divider:after{content:"";position:absolute;top:50%;transform:translateY(-50%);width:6px;height:6px;border-radius:50%;background:var(--gold)}
+  .divider:before{left:-16px}.divider:after{right:-16px}
+
+  /* bio / family letter */
+  .bio{background:var(--paper)}
+  .bio p{max-width:730px;margin:0 auto 20px;font-size:1.08rem;color:#33404e}
+  .bio p.lead{font-size:1.24rem;color:var(--navy);font-weight:500}
+  .bio p.signoff{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.35rem;color:var(--gold);font-weight:600;text-align:right;max-width:730px;margin-top:6px}
+
+  /* facts */
+  .facts{background:linear-gradient(180deg,var(--cream),#efe9dc)}
+  .facts-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;max-width:940px;margin:0 auto}
+  .fact{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:26px 22px;text-align:center;box-shadow:0 8px 24px rgba(11,29,51,.06)}
+  .fact .icon{font-size:1.5rem;margin-bottom:8px}
+  .fact .label{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:6px}
+  .fact .value{font-family:'Cormorant Garamond',serif;font-size:1.35rem;color:var(--navy);font-weight:600;line-height:1.25}
+
+  /* timeline */
+  .journey{background:var(--paper)}
+  .timeline{max-width:760px;margin:0 auto;position:relative;padding-left:34px}
+  .timeline:before{content:"";position:absolute;left:9px;top:6px;bottom:6px;width:2px;background:var(--line)}
+  .tl-item{position:relative;margin-bottom:34px}
+  .tl-item:last-child{margin-bottom:0}
+  .tl-item:before{content:"";position:absolute;left:-33px;top:4px;width:16px;height:16px;border-radius:50%;background:var(--gold);border:3px solid var(--paper);box-shadow:0 0 0 2px var(--gold)}
+  .tl-year{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:4px}
+  .tl-item h3{font-size:1.35rem;color:var(--navy);font-weight:600;margin-bottom:4px}
+  .tl-item p{color:#3a4552;font-size:1rem}
+
+  /* awards */
+  .awards{background:linear-gradient(180deg,#efe9dc,var(--cream))}
+  .medals{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;max-width:820px;margin:0 auto}
+  .medal{background:var(--paper);border:1px solid var(--line);border-radius:50px;padding:12px 22px;font-weight:600;color:var(--navy);font-size:.95rem;display:flex;align-items:center;gap:9px;box-shadow:0 6px 18px rgba(11,29,51,.05)}
+  .medal .dot{font-size:1.05rem}
+  .posthumous{margin-top:26px;text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.15rem;color:var(--muted)}
+
+  /* gallery */
+  .gallery{background:var(--navy);color:#fff}
+  .gallery .eyebrow{color:var(--gold-soft)}
+  .gallery .section-title{color:#fff}
+  .photo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;max-width:940px;margin:0 auto}
+  .photo-grid figure{border-radius:14px;overflow:hidden;border:1px solid rgba(201,162,39,.4);background:var(--navy-2);aspect-ratio:4/5}
+  .photo-grid img{width:100%;height:100%;object-fit:cover}
+
+  /* scholarship */
+  .scholarship{background:linear-gradient(180deg,rgba(11,29,51,.95),rgba(11,29,51,.98)),radial-gradient(circle at 50% 0,rgba(201,162,39,.25),transparent 60%),var(--navy);color:#fff;text-align:center}
+  .scholarship .eyebrow{color:var(--gold-soft)}
+  .scholarship h2{color:#fff}
+  .scholarship p{max-width:660px;margin:0 auto 14px;color:rgba(255,255,255,.86);font-size:1.08rem}
+  .crest{font-size:2.4rem;margin-bottom:14px}
+  .cta-btn{display:inline-flex;align-items:center;gap:12px;margin-top:26px;background:linear-gradient(135deg,var(--gold),var(--gold-soft));color:var(--navy);font-weight:700;font-size:1.05rem;padding:18px 42px;border-radius:50px;text-decoration:none;box-shadow:0 14px 34px rgba(201,162,39,.35);transition:transform .18s ease,box-shadow .18s ease}
+  .cta-btn:hover{transform:translateY(-3px);box-shadow:0 20px 44px rgba(201,162,39,.5)}
+  .cta-sub{margin-top:16px;font-size:.85rem;color:rgba(255,255,255,.6)}
+  .gfm-wrap{max-width:440px;margin:36px auto 0;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:14px;box-shadow:0 14px 34px rgba(0,0,0,.3)}
+  .gfm-wrap:empty{display:none}
+  .gfm-embed{min-height:40px}
+
+  /* tributes */
+  .tributes{background:var(--paper)}
+  .tribute-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;max-width:940px;margin:0 auto}
+  .tribute{background:var(--cream);border-left:3px solid var(--gold);border-radius:10px;padding:26px 26px 22px}
+  .tribute .quote{font-family:'Cormorant Garamond',serif;font-size:1.25rem;color:var(--navy);font-style:italic;margin-bottom:14px;line-height:1.5}
+  .tribute .who{font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+
+  /* footer */
+  footer{background:var(--navy);color:rgba(255,255,255,.7);text-align:center;padding:52px 24px}
+  footer .flag{color:var(--gold);letter-spacing:.28em;font-size:.72rem;text-transform:uppercase;font-weight:600;margin-bottom:14px}
+  footer .creed{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.25rem;color:#fff;max-width:600px;margin:0 auto 20px}
+  footer small{display:block;margin-top:18px;font-size:.78rem;color:rgba(255,255,255,.45)}
+  footer a.link{color:var(--gold-soft);text-decoration:underline}
+
+  @media(max-width:640px){section{padding:52px 0}.portrait{width:180px;height:180px}}
+</style>
+</head>
+<body>
+
+  <div class="ribbon">★ &nbsp; Honoring the Life &amp; Service of an American Soldier &nbsp; ★</div>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="wrap">
+      <div class="portrait">
+        <img src="https://d2g8igdw686xgo.cloudfront.net/106214593_1784572617100421_r.jpg" alt="Portrait of 1st Lt. Tyler James Feehan" onerror="this.style.display='none';this.parentNode.innerHTML='TJF'">
+      </div>
+      <div class="rank">1st Lieutenant, U.S. Army &nbsp;·&nbsp; Posthumously Promoted to Captain</div>
+      <h1>Tyler James Feehan</h1>
+      <div class="callsign">"Tivo"</div>
+      <div class="dates">Forever 25 <span class="star">✦</span> Fell July 18, 2026</div>
+      <p class="hero-quote">"Everyone who knew him loved him. Tyler, we are proud of you beyond words — devastated, yes, but prouder still."</p>
+      <a class="hero-cta" href="https://www.gofundme.com/f/honor-tyler-feehan-scholarships-for-rotc-cadets" target="_blank" rel="noopener">🎓 &nbsp;Support the ROTC Scholarship</a>
+    </div>
+  </header>
+
+  <!-- FAMILY LETTER -->
+  <section class="bio">
+    <div class="wrap">
+      <div class="eyebrow">From the Feehan Family</div>
+      <h2 class="section-title">Remembering Our "Tivo"</h2>
+      <div class="divider"></div>
+      <p class="lead">Our hearts are shattered. Tyler James Feehan, our son, our "Tivo," was taken from us far too soon, alongside other American heroes lost or wounded in this same tragic attack.</p>
+      <p>In just 25 years, Tyler packed in more living than most people manage in a lifetime. He chased adventure relentlessly, whether it meant reaching Everest Base Camp or walking the Camino de Santiago across France and into Spain. As a leader, he never wavered in putting his soldiers first. He mentored them, shared his love of finance, and pushed the value of education every chance he got. He believed deeply in the power of military service, especially what it builds in a person: discipline, leadership, character. Everyone who knew him loved him.</p>
+      <p>Behind him, he leaves a family in mourning. His parents, his fiancée who was to become his wife upon his return from deployment, four sets of grandparents, and a wide circle of aunts, uncles, and cousins who adored him. Law school was next on his list, a goal he talked about with the same confidence he quoted from <em>Legally Blonde</em>: "What, like it's hard?"</p>
+      <p>To every man and woman who serves this country, our prayers remain with you, as they always have.</p>
+      <p>Tyler, we are proud of you beyond words. Devastated, yes, but prouder still. No parents could have asked for a better son, and carrying your legacy forward is now our purpose.</p>
+      <p>We ask only this: that in remembering Tyler, people pause to see the good this country still holds, rather than what divides it. To that end, we're building a scholarship in his name, one meant to open doors to education for those who serve or hope to. We're starting it with his death gratuity, and we welcome anyone moved to give.</p>
+      <p class="signoff">— The Feehan Family</p>
+    </div>
+  </section>
+
+  <!-- SERVICE FACTS -->
+  <section class="facts">
+    <div class="wrap">
+      <div class="eyebrow">In Uniform</div>
+      <h2 class="section-title">Service Record</h2>
+      <div class="divider"></div>
+      <div class="facts-grid">
+        <div class="fact">
+          <div class="icon">🎖️</div>
+          <div class="label">Branch</div>
+          <div class="value">U.S. Army<br>Air Defense Artillery</div>
+        </div>
+        <div class="fact">
+          <div class="icon">⭐</div>
+          <div class="label">Rank</div>
+          <div class="value">1st Lieutenant<br><span style="font-size:.85rem;color:var(--muted)">(Capt., posthumous)</span></div>
+        </div>
+        <div class="fact">
+          <div class="icon">🛡️</div>
+          <div class="label">Unit</div>
+          <div class="value">2-55 ADA Regt.<br>32nd AAMDC</div>
+        </div>
+        <div class="fact">
+          <div class="icon">📍</div>
+          <div class="label">Duty Station</div>
+          <div class="value">Fort Bragg<br>North Carolina</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JOURNEY / TIMELINE -->
+  <section class="journey">
+    <div class="wrap">
+      <div class="eyebrow">His Journey</div>
+      <h2 class="section-title">Milestones</h2>
+      <div class="divider"></div>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-year">2019</div>
+          <h3>Answered the Call</h3>
+          <p>Born in Utah and raised in Georgia, Tyler enlisted in the Army National Guard while his father was stationed in Georgia — the beginning of his life of service. He later served with the 2nd Battalion, 222nd Field Artillery, Utah Army National Guard, while a student at Southern Utah University.</p>
+        </div>
+        <div class="tl-item">
+          <div class="tl-year">Spring 2024</div>
+          <h3>Commissioned as an Officer</h3>
+          <p>Earned his commission as an Air Defense Artillery officer through the SUU Army ROTC program — stepping into active-duty leadership.</p>
+        </div>
+        <div class="tl-item">
+          <div class="tl-year">2024–2026</div>
+          <h3>Platoon Leader at Fort Bragg</h3>
+          <p>Served with the 2nd Battalion, 55th Air Defense Artillery Regiment, 32nd Army Air and Missile Defense Command — leading and mentoring his soldiers.</p>
+        </div>
+        <div class="tl-item">
+          <div class="tl-year">July 18, 2026</div>
+          <h3>Killed in Action</h3>
+          <p>Fell while serving his country at Muwaffaq Salti Air Base in Jordan. Honored in a dignified transfer at Dover Air Force Base and remembered by a grateful nation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AWARDS -->
+  <section class="awards">
+    <div class="wrap">
+      <div class="eyebrow">Honors Earned</div>
+      <h2 class="section-title">Awards &amp; Decorations</h2>
+      <div class="divider"></div>
+      <div class="medals">
+        <div class="medal"><span class="dot">🥉</span> Bronze Star Medal</div>
+        <div class="medal"><span class="dot">💜</span> Purple Heart</div>
+        <div class="medal"><span class="dot">⚔️</span> Combat Action Badge</div>
+        <div class="medal"><span class="dot">🎖️</span> Army Achievement Medal</div>
+        <div class="medal"><span class="dot">🇺🇸</span> National Defense Service Medal</div>
+        <div class="medal"><span class="dot">🎗️</span> Army Service Ribbon</div>
+      </div>
+      <p class="posthumous">The Bronze Star, Purple Heart, and Combat Action Badge were awarded posthumously in recognition of his sacrifice.</p>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery">
+    <div class="wrap">
+      <div class="eyebrow">Remembering Tyler</div>
+      <h2 class="section-title">In Photographs</h2>
+      <div class="divider"></div>
+      <div class="photo-grid">
+        <figure><img src="https://d2g8igdw686xgo.cloudfront.net/106214593_1784691740983773_r.jpg" alt="Tyler Feehan" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure>
+        <figure><img src="https://d2g8igdw686xgo.cloudfront.net/106214593_1784691741103379_r.jpg" alt="Tyler Feehan" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure>
+        <figure><img src="https://d2g8igdw686xgo.cloudfront.net/106214593_1784691741330361_r.jpg" alt="Tyler Feehan" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure>
+        <figure><img src="https://d2g8igdw686xgo.cloudfront.net/106214593_1784691741864933_r.jpg" alt="Tyler Feehan" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure>
+        <figure><img src="https://d2g8igdw686xgo.cloudfront.net/106214593_1784691740856194_r.jpg" alt="Tyler Feehan" loading="lazy" onerror="this.closest('figure').style.display='none'"></figure>
+      </div>
+      <p style="text-align:center;margin-top:22px;font-size:.82rem;color:rgba(255,255,255,.5)">Photos courtesy of the Feehan family via the official GoFundMe memorial.</p>
+    </div>
+  </section>
+
+  <!-- SCHOLARSHIP -->
+  <section class="scholarship" id="scholarship">
+    <div class="wrap">
+      <div class="crest">🎓</div>
+      <div class="eyebrow">Carry the Legacy Forward</div>
+      <h2 class="section-title">The Tyler Feehan ROTC Scholarship</h2>
+      <div class="divider"></div>
+      <p>In Tyler's memory, his family has established a scholarship to support ROTC cadets — beginning at Southern Utah University, where his own journey as an officer began. Started with his military death gratuity, the fund carries forward everything he stood for: education, leadership, and service.</p>
+      <p>His parents ask that we honor him by choosing to "see the good this country still holds, rather than what divides it." Every gift helps a future officer answer the call.</p>
+
+      <!-- Official GoFundMe live widget (from the fundraiser's Share > Embed). If GoFundMe's embed code ever changes, paste the new snippet here. -->
+      <div class="gfm-wrap">
+        <div class="gfm-embed" data-url="https://www.gofundme.com/f/honor-tyler-feehan-scholarships-for-rotc-cadets/widget/large"></div>
+      </div>
+      <script defer src="https://www.gofundme.com/static/js/embed.js"></script>
+
+      <a class="cta-btn" href="https://www.gofundme.com/f/honor-tyler-feehan-scholarships-for-rotc-cadets" target="_blank" rel="noopener">❤️ &nbsp;Donate to the Scholarship</a>
+      <p class="cta-sub">Secure donations are processed through GoFundMe. Please share this page with anyone who would like to honor Tyler's service.</p>
+    </div>
+  </section>
+
+  <!-- TRIBUTES -->
+  <section class="tributes">
+    <div class="wrap">
+      <div class="eyebrow">In Their Words</div>
+      <h2 class="section-title">Tributes &amp; Memories</h2>
+      <div class="divider"></div>
+      <div class="tribute-grid">
+        <div class="tribute">
+          <div class="quote">"It is with a heavy heart that I share news that one of our own, 1st Lt. Tyler James Feehan, was among the soldiers killed in action on July 18 in Jordan."</div>
+          <div class="who">— President Mindy Benson, Southern Utah University</div>
+        </div>
+        <div class="tribute">
+          <div class="quote">"Everyone who knew him loved him. He never wavered in putting his soldiers first."</div>
+          <div class="who">— The Feehan Family</div>
+        </div>
+        <div class="tribute">
+          <div class="quote">Tyler was honored in a dignified transfer at Dover Air Force Base and remembered by a grateful nation for his service and sacrifice.</div>
+          <div class="who">— In National Remembrance</div>
+        </div>
+      </div>
+      <p style="text-align:center;margin-top:30px;color:var(--muted);font-size:.98rem">To share a memory of Tyler, visit the <a href="https://www.gofundme.com/f/honor-tyler-feehan-scholarships-for-rotc-cadets" target="_blank" rel="noopener" style="color:var(--gold);font-weight:600">memorial page</a>.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="flag">★ ★ ★ &nbsp; Gone But Never Forgotten &nbsp; ★ ★ ★</div>
+    <p class="creed">"All gave some. Some gave all."</p>
+    <p>In loving memory of 1st Lt. Tyler James Feehan, U.S. Army — thank you for your service and your sacrifice.</p>
+    <p style="margin-top:14px"><a class="link" href="https://www.gofundme.com/f/honor-tyler-feehan-scholarships-for-rotc-cadets" target="_blank" rel="noopener">Honor Tyler Feehan: Scholarships for ROTC Cadets →</a></p>
+    <small>Created in his memory by family &amp; friends · 2026</small>
+  </footer>
+
+</body>
+</html>
