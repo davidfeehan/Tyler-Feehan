@@ -57,6 +57,13 @@
   .bio p.lead{font-size:1.24rem;color:var(--navy);font-weight:500}
   .bio p.signoff{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.35rem;color:var(--gold);font-weight:600;text-align:right;max-width:730px;margin-top:6px}
 
+  /* tribute song */
+  .song{background:linear-gradient(180deg,#efe9dc,var(--cream));text-align:center}
+  .song-intro{max-width:600px;margin:0 auto 24px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.3rem;color:var(--navy)}
+  .player{max-width:520px;margin:0 auto;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:18px 20px;box-shadow:0 10px 28px rgba(11,29,51,.08)}
+  .player audio{width:100%;display:block}
+  .song-note{margin-top:14px;font-size:.82rem;color:var(--muted)}
+
   /* facts */
   .facts{background:linear-gradient(180deg,var(--cream),#efe9dc)}
   .facts-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;max-width:940px;margin:0 auto}
@@ -153,6 +160,23 @@
       <p>Tyler, we are proud of you beyond words. Devastated, yes, but prouder still. No parents could have asked for a better son, and carrying your legacy forward is now our purpose.</p>
       <p>We ask only this: that in remembering Tyler, people pause to see the good this country still holds, rather than what divides it. To that end, we're building a scholarship in his name, one meant to open doors to education for those who serve or hope to. We're starting it with his death gratuity, and we welcome anyone moved to give.</p>
       <p class="signoff">— The Feehan Family</p>
+    </div>
+  </section>
+
+  <!-- TRIBUTE SONG -->
+  <section class="song" id="song">
+    <div class="wrap">
+      <div class="eyebrow">A Tribute in Song</div>
+      <h2 class="section-title">Carried Him Home</h2>
+      <div class="divider"></div>
+      <p class="song-intro">Press play to hear Tyler's story.</p>
+      <div class="player">
+        <audio controls controlsList="nodownload noplaybackrate" preload="metadata" oncontextmenu="return false">
+          <source src="audio/Carried%20Him%20Home%20%28vocal%29%20%28Remastered%29.mp3" type="audio/mpeg">
+          Your browser can't play this audio.
+        </audio>
+      </div>
+      <p class="song-note">Written and performed in Tyler's memory.</p>
     </div>
   </section>
 
